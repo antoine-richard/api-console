@@ -7,28 +7,13 @@
       templateUrl: 'directives/theme-switcher.tpl.html',
       replace: true,
       link: function($scope, $element) {
+        var parent = $element;
+        while (parent && !parent.hasClass('raml-console')) {
+          parent = parent.parent();
+        }
+
         $element.on('click', function() {
-          // var $link = jQuery('head link.theme');
-          var $theme = jQuery('head').find('#raml-console-theme-dark');
-
-          // $link.attr('href', 'styles/light-theme.css');
-          // $element.removeClass('raml-console-theme-toggle-dark');
-
-          if ($theme.length === 0) {
-            jQuery.ajax({
-              url: 'styles/dark-theme.css'
-            }).done(function (data) {
-              jQuery('head').append('<style id="raml-console-theme-dark">' + data + '</style>');
-              jQuery('head').find('#raml-console-theme-light').remove();
-            });
-          } else {
-            jQuery.ajax({
-              url: 'styles/light-theme.css'
-            }).done(function (data) {
-              jQuery('head').append('<style id="raml-console-theme-light">' + data + '</style>');
-              jQuery('head').find('#raml-console-theme-dark').remove();
-            });
-          }
+          parent.toggleClass('raml-console-dark');
         });
       }
     };

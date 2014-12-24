@@ -1,0 +1,86 @@
+.tab {
+  color: $color-console-tab-text;
+}
+
+.tab-get {
+  background: $color-console-tab-get;
+}
+
+.tab-put {
+  background: $color-console-tab-put;
+}
+
+.tab-delete {
+  background: $color-console-tab-delete;
+}
+
+.tab-post {
+  background: $color-console-tab-post;
+}
+
+.tab-patch {
+  background: $color-console-tab-patch;
+}
+
+.tab-connect {
+  background: $color-console-tab-connect;
+}
+
+.tab-head {
+  background: $color-console-tab-head;
+}
+
+.tab-options {
+  background: $color-console-tab-options;
+}
+
+.tab-trace {
+  background: $color-console-tab-trace;
+}
+
+.tab:hover,
+.resource:not(.is-active) .tab.is-hovered {
+  .tab-get {
+    background: $color-console-tab-get-hover;
+  }
+
+  .tab-put {
+    background: $color-console-tab-put-hover;
+  }
+
+  .tab-delete {
+    background: $color-console-tab-delete-hover;
+  }
+
+  .tab-post {
+    background: $color-console-tab-post-hover;
+  }
+
+  .tab-patch {
+    background: $color-console-tab-patch-hover;
+  }
+
+  .tab-connect {
+    background: $color-console-tab-connect-hover;
+  }
+
+  .tab-head {
+    background: $color-console-tab-head-hover;
+  }
+
+  .tab-options {
+    background: $color-console-tab-options-hover;
+  }
+
+  .tab-trace {
+    background: $color-console-tab-trace-hover;
+  }
+}
+
+.tab.is-active {
+  color: $color-console-tab-active;
+}
+
+.tab.is-active .tab-box {
+  background: $color-console-tab-active-bg;
+}

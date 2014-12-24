@@ -1,0 +1,260 @@
+.sidebar {
+  border-left: 3px solid $color-sidebar-border;
+
+  background: $color-sidebar-bg;
+  color: $color-sidebar-text;
+}
+
+//
+// Begin Sidebar Controls
+//
+.sidebar-controls {
+  border: 1px solid $color-sidebar-controls-border;
+
+  background: $color-sidebar-controls-bg;
+
+  &:hover {
+    &,
+    .collapse {
+      background: darken($color-sidebar-controls-bg, 5%);
+    }
+  }
+
+  .collapse {
+    background: $color-sidebar-controls-bg;
+  }
+}
+
+.sidebar-content {
+  border: solid $color-sidebar-border;
+}
+
+.sidebar-row .codemirror-body-editor {
+  border: 1px solid $color-editor-border;
+}
+
+.sidebar-header {
+  border-top: 1px solid $color-sidebar-header-border;
+  border-bottom: 1px solid $color-sidebar-header-border;
+
+  background: $color-sidebar-header-bg;
+  color: $color-sidebar-header-text;
+}
+
+.sidebar-expand-btn {
+  &:hover {
+    border-color: $color-sidebar-add-btn-bg-hover;
+  }
+
+  &.is-open:before {
+    border-bottom: 7px solid $color-sidebar-add-btn-bg;
+  }
+
+  &.is-collapsed:before {
+    border-top: 7px solid $color-sidebar-add-btn-bg;
+  }
+}
+
+.sidebar-subheader {
+  border-top: 2px solid $color-sidebar-subheader-border;
+
+  color: $color-sidebar-subheader-text;
+}
+
+.sidebar-add-btn {
+  background: $color-sidebar-add-btn-bg;
+  color: $color-sidebar-add-btn;
+
+  &:hover {
+    background-color: $color-sidebar-add-btn-bg-hover;
+  }
+}
+
+.sidebar-action {
+  color: $color-console-tab-text;
+}
+
+.sidebar-action-get {
+  background-color: $color-console-tab-get;
+
+  &:hover {
+    background-color: $color-console-tab-get-hover;
+  }
+}
+
+.sidebar-action-put {
+  background-color: $color-console-tab-put;
+
+  &:hover {
+    background-color: $color-console-tab-put-hover;
+  }
+}
+
+.sidebar-action-post {
+  background-color: $color-console-tab-post;
+
+  &:hover {
+    background-color: $color-console-tab-post-hover;
+  }
+}
+
+.sidebar-action-delete {
+  background-color: $color-console-tab-delete;
+
+  &:hover {
+    background-color: $color-console-tab-delete-hover;
+  }
+}
+
+.sidebar-action-patch {
+  background-color: $color-console-tab-patch;
+
+  &:hover {
+    background-color: $color-console-tab-patch-hover;
+  }
+}
+
+.sidebar-action-connect {
+  background-color: $color-console-tab-connect;
+
+  &:hover {
+    background-color: $color-console-tab-connect-hover;
+  }
+}
+
+.sidebar-action-head {
+  background-color: $color-console-tab-head;
+
+  &:hover {
+    background-color: $color-console-tab-head-hover;
+  }
+}
+
+.sidebar-action-options {
+  background-color: $color-console-tab-options;
+
+  &:hover {
+    background-color: $color-console-tab-options-hover;
+  }
+}
+
+.sidebar-action-trace {
+  &:hover {
+    background-color: $color-console-tab-trace-hover;
+  }
+}
+
+.sidebar-action-force {
+  &:hover {
+    background-color: #ff4d4d;
+  }
+}
+
+.sidebar-action-clear {
+  background-color: $color-sidebar-action-clear-bg;
+
+  &:hover {
+    background-color: lighten($color-sidebar-action-clear-bg, 10%);
+  }
+}
+
+.sidebar-action-prefill {
+  border: 1px solid $color-toggle-border;
+  background-color: $color-toggle-bg;
+
+  &:hover {
+    color: $color-toggle-active-text;
+  }
+}
+
+.sidebar-action-reset {
+  background-color: $color-sidebar-action-reset-bg;
+
+  &:hover {
+    background-color: lighten($color-sidebar-action-reset-bg, 10%);
+  }
+}
+
+.sidebar-label {
+  color: $color-label;
+}
+
+.sidebar-input {
+  border: 1px solid $color-input-border;
+
+  background-color: $color-input-bg;
+  color: $color-input-text;
+}
+
+.sidebar-input-reset {
+  &:hover {
+    color: $color-input-reset-hover;
+  }
+}
+
+.sidebar-input-tooltip {
+  border: 1px solid $color-input-reset;
+
+  color: $color-input-reset;
+
+  .sidebar-input-tooltip-container:hover & {
+    color: $color-input-reset-hover;
+    border-color: $color-input-reset-hover;
+  }
+}
+
+.sidebar-tooltip-flyout {
+  background-color: $color-flyout-bg;
+  color: $color-flyout-text;
+
+  &:before {
+    border-bottom: 5px solid $color-flyout-bg;
+  }
+}
+
+.sidebar-tooltip-flyout-left {
+  background-color: $color-flyout-bg;
+  color: $color-flyout-text;
+
+  &:before {
+    border-bottom: 5px solid $color-flyout-bg;
+  }
+}
+
+.sidebar-label-custom {
+  border: 2px solid $color-input-border;
+}
+
+.sidebar-custom-input-for-label {
+  color: $color-label;
+}
+
+.sidebar-input-delete {
+  color: $color-input-reset;
+
+  &:hover {
+    color: $color-input-reset-hover;
+  }
+}
+
+.sidebar-response-head {
+  border-bottom: 1px solid $color-sidebar-response-border;
+
+  color: $color-sidebar-response-text;
+}
+
+.sidebar-response-item b {
+  color: $color-sidebar-text-emphasis;
+}
+
+.sidebar-pre {
+  border: 1px solid $color-sidebar-pre-border;
+
+  background: $color-sidebar-pre-bg;
+}
+
+
+.sidebar-show-more {
+  background-color: $color-sidebar-show-more-bg;
+  color: $color-resource-path-active;
+}

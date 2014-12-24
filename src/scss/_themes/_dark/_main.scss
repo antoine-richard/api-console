@@ -1,0 +1,14 @@
+.dark {
+  @import "colors";
+  @import "base";
+  @import "header";
+  @import "toggle";
+  @import "tab";
+  @import "resource";
+  @import "panel";
+  @import "sidebar";
+  @import "initializer";
+  @import "documentation";
+  @import "highlight";
+  @import "codemirror";
+}

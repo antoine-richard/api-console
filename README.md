@@ -12,22 +12,22 @@ There are two ways you can include the console: directly, or within an iframe. T
 
 1. Include the packaged CSS and JS in your document
 
-        <head>
-          …
-          <link href="styles/vendor.css" rel="stylesheet" type="text/css">
-          <link rel="stylesheet" href="path/to/dist/styles/light-theme.css" type="text/css" />
-        </head>
-        <body ng-app="ramlConsoleApp" ng-cloak>
-          …
-          <script src="path/to/dist/scripts/vendor.js"></script>
-          <script type="text/javascript" src="scripts/api-console.js"></script>
-          <script type="text/javascript">
-            $.noConflict();
-          </script>
-        </body>
+  <head>
+    ...
+    <link rel="stylesheet" href="api-console/dist/styles/api-console.css" />
+  </head>
+  <body ng-app="ramlConsoleApp" ng-cloak>
+    ...
+    <script src="api-console/dist/scripts/api-console-vendor.js"></script>
+    <script src="api-console/dist/scripts/api-console.js"></script>
+    <script>
+      $.noConflict();
+    </script>
+  </body>
 
 2. Include the `<raml-console>` directive, specifying your RAML as a `src` attribute.
-       <raml-console src='path/to/your/api.raml'></raml-console>
+
+  <raml-console src='path/to/your/api.raml'></raml-console>
 
 3. Please ensure that the container for the console directive provides the CSS properties `overflow: auto` and `position: relative`.
 
@@ -39,13 +39,13 @@ The CSS for the console is namespaced so that it won't affect other parts of the
 
 ##### JS Conflicts
 
-The console's javascript includes various dependencies, for example [AngularJS](http://angularjs.org/) and [jQuery](http://jquery.com/). If your document requires different versions or includes conflicting libraries, your page may break.
+The console's JavaScript includes various dependencies, for example [AngularJS](http://angularjs.org/) and [jQuery](http://jquery.com/). If your document requires different versions or includes conflicting libraries, your page may break.
 
 ### Including the console via an iframe
 
 1. Within the page that you would like to include the console into, add the following:
 
-        <iframe src="path/to/dist/index.html?raml=path/to/your.api.raml"/>
+  <iframe src="path/to/dist/index.html?raml=path/to/your.api.raml"/>
 
 #### Caveats
 
@@ -64,17 +64,17 @@ You will need to specify a fixed height for the iframe that fits into the design
 
 A proxy for Try It can be provided after loading the console JavaScript. For example:
 
-    RAML.Settings.proxy = 'http://www.someproxy.com/somepath/'
+  RAML.Settings.proxy = 'http://www.someproxy.com/somepath/'
 
 Given the above, trying a GET to `http://www.someapi.com/resource` would get
 
-    http://www.someproxy.com/somepath/http://www.someapi.com/resource
+  http://www.someproxy.com/somepath/http://www.someapi.com/resource
 
 ### OAuth 2
 
 A redirect URI for OAuth 2 can be provided in a similar manner:
 
-    RAML.Settings.oauth2RedirectUri = 'http://www.raml.org/console/'
+  RAML.Settings.oauth2RedirectUri = 'http://www.raml.org/console/'
 
 Given the above, OAuth 2 requests would redirect back to that URL.
 
@@ -82,13 +82,13 @@ Given the above, OAuth 2 requests would redirect back to that URL.
 
 In *Single View* mode you will be able to see only documentation or try-it. 
 
-    <raml-console single-view></raml-console>
+  <raml-console single-view></raml-console>
 
 ### Theme Switcher
 
 *Theme Switcher* can be disable if needed by adding the following setting:
 
-    <raml-console disable-theme-switcher></raml-console>
+  <raml-console disable-theme-switcher></raml-console>
 
 ## Development
 
@@ -103,15 +103,15 @@ To run the console, you'll need the following:
 ### First Time Setup
 
 1. Install Sass - `gem install sass`
-1. Install grunt-cli globally - `npm install -g grunt-cli`
-1. Install bower globally - `npm install -g bower`
-1. Install the console's NPM packages - `npm install`
-1. Install the console's Bower packages - `bower install`
+2. Install grunt-cli globally - `npm install -g grunt-cli`
+3. Install bower globally - `npm install -g bower`
+4. Install the console's NPM packages - `npm install`
+5. Install the console's Bower packages - `bower install`
 
 ### Running the server
 
-    $ grunt server
-    $ open http://localhost:9000
+  $ grunt server
+  $ open http://localhost:9000
 
 ## Testing
 
@@ -127,11 +127,11 @@ To run tests, you'll need the following:
 ### First Time Setup
 
 1. Install Sass - `gem install sass`
-1. Install grunt-cli globally - `npm install -g grunt-cli`
-1. Install protractor globally - `npm install -g protractor`
-1. Install the console's NPM packages - `npm install`
-1. Run  `node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update`
+2. Install grunt-cli globally - `npm install -g grunt-cli`
+3. Install protractor globally - `npm install -g protractor`
+4. Install the console's NPM packages - `npm install`
+5. Run `node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update`
 
 ### Running Tests
 
-    $ grunt regression
+  $ grunt regression

@@ -1,0 +1,84 @@
+.resource-menu-item {
+  button.button-is-active {
+    background: $color-console-response-status !important;
+    border-top: 1px $color-gray-dark solid !important;
+  }
+}
+
+.resource-menu-button {
+  background: $color-flag-bg !important;
+  border-top: 1px $color-gray-dark solid !important;
+  border-left: 3px $color-gray-dark solid !important;
+  border-bottom: 1px $color-gray-dark solid !important;
+}
+
+.resource-list-root {
+  border-top: 1px solid $color-console-border;
+}
+
+.resource-list-item.is-active + .resource-list-item {
+  border-top: 1px solid $color-console-border;
+}
+
+.resource {
+  border-bottom: 1px solid $color-console-border;
+
+  &.is-active {
+    border-color: $color-resource-path-active-border;
+
+    background: $color-resource-path-active-bg;
+  }
+}
+
+.resource-close-btn {
+  color: $color-resource-close;
+
+  &:hover {
+    color: $color-resource-close-bg-hover;
+  }
+}
+
+.resource.is-active + .resource-list {
+  border-top: 1px solid $color-console-border;
+}
+
+.resource.is-active .resource-path-active {
+  color: $color-resource-path-active;
+}
+
+.resource-root-toggle {
+  &:before {
+    border-top-color: $color-console-toggle;
+  }
+}
+
+.flag {
+  border: 1px solid $color-console-flag-border;
+
+  background: $color-console-flag-bg;
+  color: $color-console-flag-text;
+}
+
+.resource-heading-flag {
+  background: $color-console-flag-bg;
+}
+
+.flag b {
+  color: $color-console-flag-text-b;
+}
+
+.resource-path-active {
+  color: $color-console-heading-text;
+}
+
+.resource-proxy {
+  color: $color-sidebar-subheader-text;
+
+  a {
+    color: $color-sidebar-subheader-text;
+  }
+
+  a:visited {
+    color: $color-sidebar-subheader-text;
+  }
+}

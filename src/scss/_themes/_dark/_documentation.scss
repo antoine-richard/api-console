@@ -1,0 +1,25 @@
+.toggle-all {
+  background-color: $color-toggle-all;
+}
+
+.documentation-active {
+  .resource-path-active {
+    color: $color-resource-path-active;
+  }
+
+  .document-header {
+    border-color: $color-resource-path-active-border;
+
+    background: $color-resource-path-active-bg;
+  }
+}
+
+.documentation-header {
+  background: $color-console-documentation-header;
+}
+
+.root-documentation {
+  .documentation-contents {
+    background: $color-console-documentation-contents;
+  }
+}

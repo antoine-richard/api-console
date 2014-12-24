@@ -1,0 +1,28 @@
+.initializer-content-wrapper section {
+  background: $color-sidebar-bg;
+}
+
+.initializer-subheader {
+  border-top: 2px solid $color-sidebar-subheader-border;
+
+  color: $color-sidebar-subheader-text;
+}
+
+.initializer-input {
+  border: 1px solid $color-input-border;
+
+  background-color: $color-input-bg;
+  color: $color-input-text;
+}
+
+.initializer-action {
+  color: $color-console-tab-text;
+}
+
+.initializer-action-btn {
+  background-color: $color-sidebar-action-reset-bg;
+
+  &:hover {
+    background-color: lighten($color-sidebar-action-reset-bg, 10%);
+  }
+}

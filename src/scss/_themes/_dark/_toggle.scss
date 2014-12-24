@@ -1,0 +1,39 @@
+.toggle {
+  border: 1px solid $color-toggle-border;
+
+  background-color: $color-toggle-bg;
+  color: $color-toggle-text;
+
+  &:hover {
+    border-color: $color-toggle-active-border;
+    color: $color-toggle-active-bg;
+  }
+
+  &.is-active {
+    border-color: $color-toggle-active-border;
+
+    background: $color-toggle-active-bg;
+    color: $color-toggle-active-text;
+  }
+}
+
+.toggle-tabs {
+  .toggle-tab {
+    background-color: $color-resource-toggle-bg;
+    color: $color-resource-toggle-text;
+
+    // Shadows cast from the first tab on the left
+    &:first-child {
+      box-shadow:         inset -2px -3px 5px 1px $color-resource-toggle-border-shadow;
+    }
+
+    // Shadows cast from the first tab on the left
+    &:last-child {
+      box-shadow:         inset 2px -3px 5px 1px $color-resource-toggle-border-shadow;
+    }
+
+    &.is-active {
+      color: $color-resource-toggle-text-active;
+    }
+  }
+}

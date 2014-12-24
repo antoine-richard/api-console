@@ -6,33 +6,17 @@
       restrict: 'E',
       templateUrl: 'resources/resources.tpl.html',
       replace: true,
-      scope: {
-        src: '@'
-      },
+      scope: true,
       controller: function($scope, $window, $attrs) {
-        $scope.proxy = $window.RAML.Settings.proxy;
+        $scope.proxy        = $window.RAML.Settings.proxy;
         $scope.disableTitle = false;
-        $scope.collapsed = false;
+        $scope.collapsed    = false;
 
-        if ($attrs.hasOwnProperty('singleView')) {
-          $scope.singleView = true;
-        }
-
-        if ($attrs.hasOwnProperty('disableThemeSwitcher')) {
-          $scope.disableThemeSwitcher = true;
-        }
-
-        if ($attrs.hasOwnProperty('disableTitle')) {
-          $scope.disableTitle = true;
-        }
-
-        if ($attrs.hasOwnProperty('collapsed')) {
-          $scope.collapsed = true;
-        }
-
-        if ($scope.src) {
-          ramlParserWrapper.load($scope.src);
-        }
+        ['singleView', 'disableThemeSwitcher', 'disableTitle', 'collapsed'].forEach(function (key) {
+          if ($attrs.hasOwnProperty(key)) {
+            $scope[key] = true;
+          }
+        });
 
         $scope.updateProxyConfig = function (status) {
           $window.RAML.Settings.disableProxy = status;
@@ -88,7 +72,6 @@
       link: function($scope) {
         ramlParserWrapper.onParseSuccess(function(raml) {
           $scope.raml = RAML.Inspector.create(raml);
-          $scope.loaded = true;
         });
       }
     };

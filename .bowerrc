@@ -1,4 +1,4 @@
 {
   "interactive": false,
-  "directory": "vendor/bower_components"
+  "directory": "bower_components"
 }

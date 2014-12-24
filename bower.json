@@ -5,6 +5,11 @@
     "type": "git",
     "url": "https://github.com/mulesoft/api-console.git"
   },
+  "main": [
+    "./dist/scripts/api-console.js",
+    "./dist/styles/api-console.css",
+    "./src/scss/main.scss"
+  ],
   "dependencies": {
     "angular": "~1.2.16",
     "angular-ui-codemirror": "0.1.6",

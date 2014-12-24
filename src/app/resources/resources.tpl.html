@@ -1,16 +1,5 @@
-<main class="raml-console-error-container raml-console-error-primary">
-
-  <div ng-if="!loaded">
-    <div class="raml-console-spinner">
-      <div class="raml-console-rect1"></div>
-      <div class="raml-console-rect2"></div>
-      <div class="raml-console-rect3"></div>
-      <div class="raml-console-rect4"></div>
-      <div class="raml-console-rect5"></div>
-    </div>
-  </div>
-
-  <div ng-if="loaded">
+<div class="raml-console">
+  <div class="raml-console-body">
     <theme-switcher ng-if="!disableThemeSwitcher"></theme-switcher>
     <h1 ng-if="!disableTitle" class="raml-console-title">{{raml.title}}</h1>
 
@@ -44,7 +33,6 @@
 
             <resource-type></resource-type>
             <span ng-if="methodInfo.is" class="raml-console-flag raml-console-resource-heading-flag raml-console-resource-trait"><b>Trait:</b> {{traits}}</span>
-
           </div>
 
           <method-list></method-list>
@@ -73,8 +61,7 @@
             <resource-panel></resource-panel>
           </li>
         </ol>
-
       </li>
     </ol>
   </div>
-</main>
+</div>

@@ -1,0 +1,91 @@
+.resource-header {
+  border-top: 1px solid $color-resource-header-border;
+  border-bottom: 1px solid $color-resource-header-border;
+
+  background: $color-resource-header-bg;
+  color: $color-sidebar-header-text;
+}
+
+.resource-body-heading > span.is-active {
+  background: $color-body-heading;
+  color: $color-resource-text;
+}
+
+.request-body-heading > span.is-active {
+  background: $color-body-heading;
+  color: $color-resource-text;
+}
+
+.resource-panel {
+  border: solid $color-resource-border;
+
+  background: $color-resource-bg;
+  color: $color-resource-text;
+}
+
+.resource-panel-primary {
+  a {
+    color: $color-resource-a;
+  }
+}
+
+.response-container {
+  border: 1px solid $color-gray-dark;
+}
+
+.resource-panel-content {
+  background: $color-console-response-status;
+}
+
+.resource-panel-flag-list {
+  .flag {
+    border: 1px solid $color-flag-border;
+
+    background: $color-flag-bg;
+  }
+}
+
+.resource-heading-a {
+  color: $color-resource-heading;
+}
+
+.resource-param-heading {
+  border-bottom: 1px solid $color-resource-param-border;
+}
+
+.resource-param-instructional {
+  color: $color-resource-param-instructional;
+}
+
+.resource-param-example {
+  b {
+    color: $color-resource-param-instructional;
+  }
+}
+
+.resource-btn {
+  background-color: $color-toggle-bg;
+  color: $color-resource-a;
+
+  &.is-active, &:hover {
+    background-color: $color-resource-a;
+    color: $color-toggle-active-text;
+  }
+}
+
+.resource-response .flag {
+  border: 1px solid $color-flag-border;
+
+  background: $color-flag-bg;
+  color: $color-flag-text-bold;
+}
+
+.resource-pre {
+  border: 1px solid $color-sidebar-pre-border;
+
+  background: $color-sidebar-pre-bg;
+}
+
+.toggle-button, .toggle-button:visited, .toggle-button:active {
+  color: $color-sidebar-subheader-text;
+}
